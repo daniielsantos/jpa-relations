@@ -44,4 +44,9 @@ public class OrdersController {
             throw new IllegalStateException("Pedido nao encontrado");
         }
     }
+
+    @GetMapping(path = "name/{clientName}")
+    private List<Orders> findByName(@PathVariable String clientName) {
+        return ordersService.findByName(clientName);
+    }
 }

@@ -21,7 +21,10 @@ public class OrdersService {
 
     public void deleteOrder(Long orderId) {
         Orders orders = ordersRepository.findById(orderId).orElseThrow(() -> new IllegalStateException("Not found"));
-        System.out.println("aweeeeeeee "+orders.toString());
         ordersRepository.delete(orders);
+    }
+
+    public List<Orders> findByName(String clientName) {
+        return ordersRepository.findByClientNameIgnoreCase(clientName);
     }
 }

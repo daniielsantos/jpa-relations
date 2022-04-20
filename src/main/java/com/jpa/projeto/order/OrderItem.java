@@ -1,12 +1,7 @@
 package com.jpa.projeto.order;
 
 import com.jpa.projeto.product.Product;
-import org.hibernate.annotations.Formula;
-
 import javax.persistence.*;
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Table(name = "OrderItem")
